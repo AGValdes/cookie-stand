@@ -5,6 +5,7 @@ var allStores = [];
 var parentElement = document.getElementById('cookieSales');
 var hourlyRunningTotal = [];
 var grandTotal = 0;
+var formElement = document.getElementById('form');
 // Constructor
 function Store(name, minCustomersPerHour, maxCustomersPerHour, avgCookiePerCustomer, hourlyCookies = [], totalCookiesPerDay = 0) {
     this.name = name
@@ -98,12 +99,32 @@ function generateTotalHourlyCookies(allStores) {
         newTotalThisHour = 0
     }
 }
+function handleSubmit(event) {
+    event.preventDefault();
+    var city = event.target.city.value;
+    var minCustomersPerHour = event.target.minCustomersPerHour.value;
+    var maxCustomersPerHour = event.target.maxCustomersPerHour.value;
+    var avgCookiePerCustomer = event.target.avgCookiesSoldPerCustomer.value;
+    var newStore = new Store(city, minCustomersPerHour, maxCustomersPerHour, avgCookiePerCustomer);
+    newStore.calcCookiesPerHour();
+    parentElement.innerHTML = '';
+    hoursOfOperation.pop('Daily Location Total')
+    hoursOfOperation.shift('');
+    for (var i = 0; i < allStores.length; i++) {
+        allStores[i].hourlyCookies.shift(allStores[i].name);
+    }
+    hourlyRunningTotal.shift('Totals');
+    generateHeaderRow();
+    generateAllContentRows();
+    generateTotalsRow();
+}
 function generateAllContentRows() {
     for (var i = 0; i < allStores.length; i++) {
         allStores[i].generateContentRow();
     }
 }
 // Executable Code
+formElement.addEventListener('submit', handleSubmit);
 generateTotalHourlyCookies(allStores);
 generateHeaderRow();
 generateAllContentRows();
