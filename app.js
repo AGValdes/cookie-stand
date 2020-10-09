@@ -102,9 +102,9 @@ function generateTotalHourlyCookies() {
 function handleSubmit(event) {
     event.preventDefault();
     var city = event.target.city.value;
-    var minCustomersPerHour = event.target.minCustomersPerHour.value;
-    var maxCustomersPerHour = event.target.maxCustomersPerHour.value;
-    var avgCookiePerCustomer = event.target.avgCookiesSoldPerCustomer.value;
+    var minCustomersPerHour = parseInt(event.target.minCustomersPerHour.value);
+    var maxCustomersPerHour = parseInt(event.target.maxCustomersPerHour.value);
+    var avgCookiePerCustomer = parseInt(event.target.avgCookiesSoldPerCustomer.value);
     var newStore = new Store(city, minCustomersPerHour, maxCustomersPerHour, avgCookiePerCustomer);
     newStore.calcCookiesPerHour();
     parentElement.innerHTML = '';
