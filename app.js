@@ -83,12 +83,12 @@ function generateHeaderRow() {
         trElement.appendChild(thElement);
     }
 }
-function generateTotalHourlyCookies(allStores) {
+function generateTotalHourlyCookies() {
     var newTotalThisHour = 0;
-
     for (var k = 0; k < allStores.length; k++) {
         allStores[k].calcCookiesPerHour();
     }
+
     for (var i = 0; i < allStores[0].hourlyCookies.length; i++) {
         for (var j = 0; j < allStores.length; j++) {
 
@@ -125,7 +125,7 @@ function generateAllContentRows() {
 }
 // Executable Code
 formElement.addEventListener('submit', handleSubmit);
-generateTotalHourlyCookies(allStores);
+generateTotalHourlyCookies();
 generateHeaderRow();
 generateAllContentRows();
 generateTotalsRow();

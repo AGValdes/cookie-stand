@@ -1,5 +1,5 @@
 body{
-  background-color: rgb(248, 159, 149);
+  background-color: salmon;
 }
 header{
   background-color: rgb(109, 85, 85);
@@ -38,12 +38,12 @@ h2{
   width: 350px;
   height: 250px;
   border-radius: 150px;
-  border: dotted 5px rgb(171, 194, 194);
+  border: inset 10px rgb(171, 194, 194);
 }
 #locationsheader{
   font-size: 1.5em;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 #locations{
   width: 460px;
@@ -58,6 +58,7 @@ h2{
   color:rgb(109, 85, 85);
   text-shadow: rgb(171, 194, 194) 1px 1px; 
   font-family: Arial, Helvetica, sans-serif;
+  border: rgb(171, 194, 194)  10px outset;
 }
 .location{
   display:inline-block;
@@ -70,7 +71,7 @@ h2{
   margin-left: 105px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color:rgb(109, 85, 85);
-  color: rgb(171, 194, 194);
+  color: rgb(171, 194, 194) ;
   padding: 20px;
 }
 #chinook{
@@ -79,7 +80,7 @@ h2{
   width: 400px;
   height: 250px;
   border-radius: 150px; 
-  border: dotted 5px rgb(171, 194, 194);
+  border: inset 10px rgb(171, 194, 194) ;
 }
 #aboutussection{
   position: absolute;
@@ -90,7 +91,7 @@ h2{
   position: absolute;
   height: 200px;
   border-radius: 100px;
-  border: dotted 5px rgb(171, 194, 194);
+  border: inset 10px rgb(171, 194, 194) ;
 }
 #aboutus{
   width: 500px;
@@ -111,23 +112,24 @@ h2{
   overflow: scroll;
   margin-left: 370px;
   background-color: rgb(196, 145, 145);
-  color: rgb(204, 233, 233);
+  color: rgb(171, 194, 194) ;
   text-shadow:rgb(109, 85, 85) 2px 2px;
   font-size: 1.2em;
+  border: rgb(171, 194, 194) 10px outset;
 }
 #cutter{
   position: absolute;
   margin-left: 1000px;
   height: 100px;
   border-radius: 100px;
-  border: dotted 5px rgb(171, 194, 194);
+  border: inset 10px rgb(171, 194, 194);
 }
 #frosted{
   position: absolute;
   margin-left: 900px;
   margin-top: 120px;
   border-radius: 100px;
-  border: dotted 5px rgb(171, 194, 194);
+  border: inset 10px rgb(171, 194, 194);
 }
 #merchsection{
   position: absolute;
@@ -137,7 +139,7 @@ h2{
   margin-top: 800px;
   margin-right: 1000px;
   border-radius: 120px;
-  border: dotted 5px rgb(171, 194, 194);
+  border: inset 10px rgb(171, 194, 194);
 }
 #merch{
   position: absolute;
@@ -152,7 +154,13 @@ h2{
   font-family: 'Sansita Swashed', cursive;
   color: rgb(109, 85, 85);
   text-shadow: salmon 3px 2px;
-  border: dotted 10px rgb(171, 194, 194);
+  border: outset 10px rgb(171, 194, 194);
+}
+#soon{
+  display: block;
+  font-size: .5em;
+  color: rgb(109, 85, 85);
+  text-shadow: rgb(171, 194, 194);
 }
 #footerblock{
   position: absolute;

@@ -1,8 +1,9 @@
 body{
-  background-color: rgb(248, 159, 149);
+  background-image: url(https://i.pinimg.com/originals/06/15/26/061526c014287183c22e4383a5c18ee4.jpg);
 }
 
 h1{
+  background-color:rgb(196, 145, 145);
   text-align: center;
   color:rgb(109, 85, 85);
   text-shadow: rgb(171, 194, 194) 1px 1px; 
@@ -36,9 +37,9 @@ label{
 a{
   border: rgb(171, 194, 194) 2px solid;
   margin-left: 610px;
-  margin-top: 20px;
   font-size: 2em;
   text-decoration: none;
   color:rgb(109, 85, 85);
   text-shadow: rgb(171, 194, 194) 1px 1px;
+  background-color: rgb(196, 145, 145);
 }
