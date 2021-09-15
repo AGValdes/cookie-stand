@@ -56,10 +56,9 @@ Store.prototype.renderContentRow = function () { //generate CONTENT
 
 // Helper Functions
 
-// }
+
 function renderStoreHourHeader() {
   var trElement = document.createElement('tr');
-  // trElement.appendChild(document.createElement('td'));
   for (var i = 0; i < hoursOfOperation.length; i++) {
     var thElement = document.createElement('th');
     thElement.textContent = hoursOfOperation[i];
@@ -70,9 +69,6 @@ function renderStoreHourHeader() {
 
 function generateTotalHourlyCookies(allStores) {
   var newTotalThisHour = 0;
-  // for (var k = 0; k < allStores.length; k++) {  //Cycle Through Stores Hourly Cookies
-  //   allStores[k].calcCookiesPerHour();
-  // }
 
   for (var i = 0; i < allStores[0].hourlyCookies.length; i++) { //Running through array Hourly Cookies.
     for (var j = 0; j < allStores.length; j++) {  //Cycle through the stores
@@ -116,19 +112,8 @@ function handleSubmit(event) {
   renderStoreHourHeader();
   renderAllContentRows();
   generateTotalsRow();
-
-  // newStore.calcCookiesPerHour();
-
-  // hoursOfOperation.pop('Daily Location Total');
-  // hoursOfOperation.shift('');
-  // for (var i = 0; i < allStores.length; i++) {
-  //   allStores[i].hourlyCookies.shift();
-  // }
-  // hourlyRunningTotal.shift('Totals');
-  // renderStoreHourHeader();
-  // generateAllContentRows();
-  // generateTotalsRow();
 }
+
 function renderAllContentRows() {
   for (var i = 0; i < allStores.length; i++) {
 
